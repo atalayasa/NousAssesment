@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		471046732334FE030040E088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471046722334FE030040E088 /* AppDelegate.swift */; };
-		471046752334FE030040E088 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471046742334FE030040E088 /* ViewController.swift */; };
-		471046782334FE030040E088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471046762334FE030040E088 /* Main.storyboard */; };
+		471046752334FE030040E088 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471046742334FE030040E088 /* MainVC.swift */; };
 		4710467A2334FE060040E088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471046792334FE060040E088 /* Assets.xcassets */; };
 		4710467D2334FE060040E088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4710467B2334FE060040E088 /* LaunchScreen.storyboard */; };
 		471046882334FE060040E088 /* NousAssesmentProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471046872334FE060040E088 /* NousAssesmentProjectTests.swift */; };
@@ -30,8 +29,7 @@
 		022C343AFE1C3E714F74115F /* Pods_NousAssesmentProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NousAssesmentProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4710466F2334FE030040E088 /* NousAssesmentProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NousAssesmentProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		471046722334FE030040E088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		471046742334FE030040E088 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		471046772334FE030040E088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		471046742334FE030040E088 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		471046792334FE060040E088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4710467C2334FE060040E088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4710467E2334FE060040E088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,12 +82,13 @@
 		471046712334FE030040E088 /* NousAssesmentProject */ = {
 			isa = PBXGroup;
 			children = (
-				471046722334FE030040E088 /* AppDelegate.swift */,
-				471046742334FE030040E088 /* ViewController.swift */,
-				471046762334FE030040E088 /* Main.storyboard */,
-				471046792334FE060040E088 /* Assets.xcassets */,
-				4710467B2334FE060040E088 /* LaunchScreen.storyboard */,
 				4710467E2334FE060040E088 /* Info.plist */,
+				471046952335013B0040E088 /* Assets */,
+				471046942335011E0040E088 /* Model */,
+				47104693233501180040E088 /* ViewModel */,
+				47104692233501100040E088 /* View */,
+				471046722334FE030040E088 /* AppDelegate.swift */,
+				4710467B2334FE060040E088 /* LaunchScreen.storyboard */,
 			);
 			path = NousAssesmentProject;
 			sourceTree = "<group>";
@@ -101,6 +100,36 @@
 				471046892334FE060040E088 /* Info.plist */,
 			);
 			path = NousAssesmentProjectTests;
+			sourceTree = "<group>";
+		};
+		47104692233501100040E088 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				471046742334FE030040E088 /* MainVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47104693233501180040E088 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		471046942335011E0040E088 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		471046952335013B0040E088 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				471046792334FE060040E088 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		A5C6EE1ACB8B0586622EDEDB /* Pods */ = {
@@ -175,6 +204,7 @@
 					};
 					471046822334FE060040E088 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = 4710466E2334FE030040E088;
 					};
 				};
@@ -205,7 +235,6 @@
 			files = (
 				4710467D2334FE060040E088 /* LaunchScreen.storyboard in Resources */,
 				4710467A2334FE060040E088 /* Assets.xcassets in Resources */,
-				471046782334FE030040E088 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +281,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-NousAssesmentProject/Pods-NousAssesmentProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -260,6 +290,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				471046752334FE030040E088 /* ViewController.swift in Sources */,
+				471046752334FE030040E088 /* MainVC.swift in Sources */,
 				471046732334FE030040E088 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,14 +329,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		471046762334FE030040E088 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				471046772334FE030040E088 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4710467B2334FE060040E088 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +469,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.asa.NousAssesmentProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -464,7 +487,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.asa.NousAssesmentProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -483,7 +506,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.asa.NousAssesmentProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NousAssesmentProject.app/NousAssesmentProject";
 			};
@@ -503,7 +526,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.asa.NousAssesmentProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NousAssesmentProject.app/NousAssesmentProject";
 			};
