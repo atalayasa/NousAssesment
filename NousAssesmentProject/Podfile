@@ -1,0 +1,7 @@
+platform :ios, '10.0'
+target 'NousAssesmentProject' do
+  use_frameworks!
+ pod 'RxSwift', '~> 4.5'
+ pod 'RxCocoa', '~> 4.5'
+ pod 'Kingfisher', '~> 4.1'
+end
