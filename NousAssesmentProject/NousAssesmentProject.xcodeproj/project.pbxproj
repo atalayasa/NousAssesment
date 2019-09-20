@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4707860C2335085E00A6D401 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4707860B2335085E00A6D401 /* NewsViewModel.swift */; };
+		4707860E2335086600A6D401 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4707860D2335086600A6D401 /* News.swift */; };
+		47078610233508F900A6D401 /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4707860F233508F900A6D401 /* NewsDetail.swift */; };
+		470786132335095100A6D401 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470786112335095100A6D401 /* DetailCell.swift */; };
+		470786142335095100A6D401 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470786122335095100A6D401 /* DetailCell.xib */; };
 		471046732334FE030040E088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471046722334FE030040E088 /* AppDelegate.swift */; };
 		471046752334FE030040E088 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471046742334FE030040E088 /* MainVC.swift */; };
 		4710467A2334FE060040E088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471046792334FE060040E088 /* Assets.xcassets */; };
@@ -27,6 +32,11 @@
 
 /* Begin PBXFileReference section */
 		022C343AFE1C3E714F74115F /* Pods_NousAssesmentProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NousAssesmentProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4707860B2335085E00A6D401 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		4707860D2335086600A6D401 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		4707860F233508F900A6D401 /* NewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetail.swift; sourceTree = "<group>"; };
+		470786112335095100A6D401 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		470786122335095100A6D401 /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		4710466F2334FE030040E088 /* NousAssesmentProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NousAssesmentProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		471046722334FE030040E088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		471046742334FE030040E088 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -106,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				471046742334FE030040E088 /* MainVC.swift */,
+				470786112335095100A6D401 /* DetailCell.swift */,
+				470786122335095100A6D401 /* DetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +125,7 @@
 		47104693233501180040E088 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4707860B2335085E00A6D401 /* NewsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -120,6 +133,8 @@
 		471046942335011E0040E088 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4707860D2335086600A6D401 /* News.swift */,
+				4707860F233508F900A6D401 /* NewsDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +250,7 @@
 			files = (
 				4710467D2334FE060040E088 /* LaunchScreen.storyboard in Resources */,
 				4710467A2334FE060040E088 /* Assets.xcassets in Resources */,
+				470786142335095100A6D401 /* DetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +322,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				471046752334FE030040E088 /* MainVC.swift in Sources */,
+				4707860C2335085E00A6D401 /* NewsViewModel.swift in Sources */,
+				470786132335095100A6D401 /* DetailCell.swift in Sources */,
+				4707860E2335086600A6D401 /* News.swift in Sources */,
+				47078610233508F900A6D401 /* NewsDetail.swift in Sources */,
 				471046732334FE030040E088 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
