@@ -55,6 +55,7 @@ private extension MainVC {
         searchController.dimsBackgroundDuringPresentation = false
     }
 
+    /// It inits news view model and creates binding for it.
     func initVM() {
         viewModel
             .filteredItems
@@ -71,7 +72,8 @@ private extension MainVC {
         tableView
             .rx
             .modelSelected(NewsDetail.self)
-            .subscribe(onNext: { (item) in
+            .subscribe(onNext: { [weak self] (item) in
+                guard let `self` = self else { return }
                 self.sendEmail(with: item)
             })
             .disposed(by: viewModel.disposeBag)
@@ -84,6 +86,9 @@ private extension MainVC {
             .disposed(by: viewModel.disposeBag)
         viewModel.fetchDate()
     }
+    /// It sends an email with specified new detail
+    ///
+    /// - Parameter detail: New Detail for sending email
     func sendEmail(with detail: NewsDetail) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()

@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class NewsViewModel {
+final class NewsViewModel {
     let newsUrl: String = "https://cloud.nousdigital.net/s/sBDBJqFnfeBPrQR/download"
     let disposeBag = DisposeBag()
     let news: BehaviorRelay<[NewsDetail]> = BehaviorRelay(value: [])
@@ -18,15 +18,17 @@ class NewsViewModel {
     var searchValue: BehaviorRelay<String> = BehaviorRelay(value: "")
     lazy var searchValueObservable: Observable<String> = self.searchValue.asObservable()
     lazy var itemsObservable: Observable<[NewsDetail]> = self.news.asObservable()
+    /// Observable Array while searching
     lazy var filteredItemsObservable: Observable<[NewsDetail]> = self.filteredItems.asObservable()
     
     init() {
-        searchValueObservable.subscribe(onNext: { (value) in
-            print("Search value received = \(value)")
+        searchValueObservable.subscribe(onNext: { [weak self] (value) in
+            guard let `self` = self else { return }
             self.itemsObservable.map({
                 $0.filter({
                     if value.isEmpty { return true }
-                    return $0.title.lowercased().contains(value.lowercased()) || $0.description.lowercased().contains(value.lowercased())
+                    return $0.title.lowercased().contains(value.lowercased())
+                        || $0.description.lowercased().contains(value.lowercased())
                 })
             })
                 .bind(to: self.filteredItems)
@@ -36,7 +38,8 @@ class NewsViewModel {
     
     func fetchDate() {
         if let url = URL(string: newsUrl) {
-            URLSession.shared.dataTask(with: url) { data, response, error in
+            URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+                guard let `self` = self else { return }
                 if let data = data {
                     do {
                         let places = try JSONDecoder().decode(News.self, from: data)
