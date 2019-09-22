@@ -34,10 +34,12 @@ class MainVC: UIViewController {
 private extension MainVC {
     enum Constant {
         static let constraintConstant: CGFloat = 10
+        static let pageTitle: String = "News"
+        static let bgColor: UIColor = .white
     }
     func initView() {
-        title = "News"
-        view.backgroundColor = .white
+        title = Constant.pageTitle
+        view.backgroundColor = Constant.bgColor
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: tableView.topAnchor, constant: Constant.constraintConstant),

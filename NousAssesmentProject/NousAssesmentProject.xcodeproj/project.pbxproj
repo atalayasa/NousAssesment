@@ -16,7 +16,6 @@
 		471046752334FE030040E088 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471046742334FE030040E088 /* MainVC.swift */; };
 		4710467A2334FE060040E088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471046792334FE060040E088 /* Assets.xcassets */; };
 		4710467D2334FE060040E088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4710467B2334FE060040E088 /* LaunchScreen.storyboard */; };
-		471046882334FE060040E088 /* NousAssesmentProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471046872334FE060040E088 /* NousAssesmentProjectTests.swift */; };
 		5AE7192BEC50726909179226 /* Pods_NousAssesmentProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022C343AFE1C3E714F74115F /* Pods_NousAssesmentProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +43,6 @@
 		4710467C2334FE060040E088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4710467E2334FE060040E088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		471046832334FE060040E088 /* NousAssesmentProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NousAssesmentProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		471046872334FE060040E088 /* NousAssesmentProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NousAssesmentProjectTests.swift; sourceTree = "<group>"; };
-		471046892334FE060040E088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3FDFA290145CBF8A9DA6C14 /* Pods-NousAssesmentProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NousAssesmentProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NousAssesmentProject/Pods-NousAssesmentProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FF7E45E0D2DCAA113D210E15 /* Pods-NousAssesmentProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NousAssesmentProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-NousAssesmentProject/Pods-NousAssesmentProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				471046712334FE030040E088 /* NousAssesmentProject */,
-				471046862334FE060040E088 /* NousAssesmentProjectTests */,
 				471046702334FE030040E088 /* Products */,
 				A5C6EE1ACB8B0586622EDEDB /* Pods */,
 				DAB2825986BF96C8F09753FB /* Frameworks */,
@@ -100,15 +96,6 @@
 				47104692233501100040E088 /* View */,
 			);
 			path = NousAssesmentProject;
-			sourceTree = "<group>";
-		};
-		471046862334FE060040E088 /* NousAssesmentProjectTests */ = {
-			isa = PBXGroup;
-			children = (
-				471046872334FE060040E088 /* NousAssesmentProjectTests.swift */,
-				471046892334FE060040E088 /* Info.plist */,
-			);
-			path = NousAssesmentProjectTests;
 			sourceTree = "<group>";
 		};
 		47104692233501100040E088 /* View */ = {
@@ -334,7 +321,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				471046882334FE060040E088 /* NousAssesmentProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
