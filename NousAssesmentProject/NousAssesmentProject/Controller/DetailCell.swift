@@ -13,4 +13,9 @@ class DetailCell: UITableViewCell {
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descLbl: UILabel!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
 }

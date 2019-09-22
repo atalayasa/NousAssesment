@@ -43,7 +43,7 @@ private extension MainVC {
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: tableView.topAnchor, constant: Constant.constraintConstant),
-            view.bottomAnchor.constraint(equalTo: tableView.bottomAnchor, constant: Constant.constraintConstant),
+            view.bottomAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 0),
             view.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
             view.trailingAnchor.constraint(equalTo: tableView.trailingAnchor)
             ])
