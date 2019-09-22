@@ -51,8 +51,8 @@ private extension MainVC {
     func initNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.searchController = searchController
-        searchController.searchBar.sizeToFit()
         navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.dimsBackgroundDuringPresentation = false
     }
 
     func initVM() {
@@ -93,7 +93,7 @@ private extension MainVC {
             mail.setSubject(detail.title)
             present(mail, animated: true)
         } else {
-            showAlert(with: "Failed", and: "It seems a problem while you're trying to send mail.")
+            print("It seems you are trying to send email on simulator please try it on real device.")
         }
     }
 }
