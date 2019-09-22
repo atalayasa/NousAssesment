@@ -17,6 +17,7 @@
 		4710467A2334FE060040E088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471046792334FE060040E088 /* Assets.xcassets */; };
 		4710467D2334FE060040E088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4710467B2334FE060040E088 /* LaunchScreen.storyboard */; };
 		471046882334FE060040E088 /* NousAssesmentProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471046872334FE060040E088 /* NousAssesmentProjectTests.swift */; };
+		47E7A58B23377EC30089F70F /* UViewController+CreateAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E7A58A23377EC30089F70F /* UViewController+CreateAlert.swift */; };
 		5AE7192BEC50726909179226 /* Pods_NousAssesmentProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022C343AFE1C3E714F74115F /* Pods_NousAssesmentProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		471046832334FE060040E088 /* NousAssesmentProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NousAssesmentProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		471046872334FE060040E088 /* NousAssesmentProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NousAssesmentProjectTests.swift; sourceTree = "<group>"; };
 		471046892334FE060040E088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E7A58A23377EC30089F70F /* UViewController+CreateAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UViewController+CreateAlert.swift"; sourceTree = "<group>"; };
 		C3FDFA290145CBF8A9DA6C14 /* Pods-NousAssesmentProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NousAssesmentProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NousAssesmentProject/Pods-NousAssesmentProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FF7E45E0D2DCAA113D210E15 /* Pods-NousAssesmentProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NousAssesmentProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-NousAssesmentProject/Pods-NousAssesmentProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,13 +94,13 @@
 		471046712334FE030040E088 /* NousAssesmentProject */ = {
 			isa = PBXGroup;
 			children = (
+				47E7A58C233784990089F70F /* Controller */,
+				47E7A58923377EB00089F70F /* Extension */,
 				4710467E2334FE060040E088 /* Info.plist */,
-				471046952335013B0040E088 /* Assets */,
+				471046792334FE060040E088 /* Assets.xcassets */,
 				471046942335011E0040E088 /* Model */,
 				47104693233501180040E088 /* ViewModel */,
 				47104692233501100040E088 /* View */,
-				471046722334FE030040E088 /* AppDelegate.swift */,
-				4710467B2334FE060040E088 /* LaunchScreen.storyboard */,
 			);
 			path = NousAssesmentProject;
 			sourceTree = "<group>";
@@ -115,8 +117,7 @@
 		47104692233501100040E088 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				471046742334FE030040E088 /* MainVC.swift */,
-				470786112335095100A6D401 /* DetailCell.swift */,
+				4710467B2334FE060040E088 /* LaunchScreen.storyboard */,
 				470786122335095100A6D401 /* DetailCell.xib */,
 			);
 			path = View;
@@ -139,12 +140,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		471046952335013B0040E088 /* Assets */ = {
+		47E7A58923377EB00089F70F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				471046792334FE060040E088 /* Assets.xcassets */,
+				47E7A58A23377EC30089F70F /* UViewController+CreateAlert.swift */,
 			);
-			path = Assets;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		47E7A58C233784990089F70F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				471046722334FE030040E088 /* AppDelegate.swift */,
+				471046742334FE030040E088 /* MainVC.swift */,
+				470786112335095100A6D401 /* DetailCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A5C6EE1ACB8B0586622EDEDB /* Pods */ = {
@@ -327,6 +338,7 @@
 				4707860E2335086600A6D401 /* News.swift in Sources */,
 				47078610233508F900A6D401 /* NewsDetail.swift in Sources */,
 				471046732334FE030040E088 /* AppDelegate.swift in Sources */,
+				47E7A58B23377EC30089F70F /* UViewController+CreateAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YC65TQLST9;
 				INFOPLIST_FILE = NousAssesmentProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -500,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YC65TQLST9;
 				INFOPLIST_FILE = NousAssesmentProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

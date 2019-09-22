@@ -14,7 +14,26 @@ class NewsViewModel {
     let newsUrl: String = "https://cloud.nousdigital.net/s/sBDBJqFnfeBPrQR/download"
     let disposeBag = DisposeBag()
     let news: BehaviorRelay<[NewsDetail]> = BehaviorRelay(value: [])
-
+    var filteredItems: BehaviorRelay<[NewsDetail]> = BehaviorRelay(value: [])
+    var searchValue: BehaviorRelay<String> = BehaviorRelay(value: "")
+    lazy var searchValueObservable: Observable<String> = self.searchValue.asObservable()
+    lazy var itemsObservable: Observable<[NewsDetail]> = self.news.asObservable()
+    lazy var filteredItemsObservable: Observable<[NewsDetail]> = self.filteredItems.asObservable()
+    
+    init() {
+        searchValueObservable.subscribe(onNext: { (value) in
+            print("Search value received = \(value)")
+            self.itemsObservable.map({
+                $0.filter({
+                    if value.isEmpty { return true }
+                    return $0.title.lowercased().contains(value.lowercased()) || $0.description.lowercased().contains(value.lowercased())
+                })
+            })
+                .bind(to: self.filteredItems)
+                .disposed(by: self.disposeBag)
+        }).disposed(by: disposeBag)
+    }
+    
     func fetchDate() {
         if let url = URL(string: newsUrl) {
             URLSession.shared.dataTask(with: url) { data, response, error in
